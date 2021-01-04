@@ -49,11 +49,11 @@ $ sudo chmod 666 /var/run/docker.sock;
 
 ## 사용예
 
-* dockerFile build 방법
+* Dockerfile build 방법
 
 ```shell
-# dockerFile 작성 후, 해당 dockerFile 규칙대로 Build 하고자 할 경우 아래와 같이 Build한다.
-# docker build --tag <tag_name> <dockerFile_path>
+# Dockerfile 작성 후, 해당 Dockerfile 규칙대로 Build 하고자 할 경우 아래와 같이 Build한다.
+# docker build --tag <tag_name> <Dockerfile_path>
 $ docker build --tag node_kgs:1 .
 ```
 
