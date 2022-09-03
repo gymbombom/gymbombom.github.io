@@ -1,11 +1,11 @@
 ---
 layout: post
-title: java Code를 이용하여 방화벽 체크
+title: java를 이용하여 방화벽 체크
 tags :
     - 방화벽
     - firewall
     - telnet
-    - 텔넷	
+    - 텔넷
 ---
 
 
