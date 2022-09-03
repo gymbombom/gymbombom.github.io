@@ -25,7 +25,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 640px;
   padding: 0 10px;
   width: 100%;
 }
@@ -72,9 +72,6 @@ a {
   color: $blue;
   text-decoration: none;
 	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
-  }
 }
 
 ul, ol {
@@ -151,12 +148,14 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  background-color: #4F95B6;
+  border-bottom: 1px solid #ddd;
 }
 
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  padding: 25px 0;
+ // border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
@@ -191,18 +190,20 @@ img {
 }
 
 .site-name {
+  float: left;
   margin: 0;
-  color: $darkGray;
+  color: $white;
   cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
+  font-family: $Merriweather;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   font-size: 28px;
-  letter-spacing: 1px;
+  //letter-spacing: 1px;
 }
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $white;
   font-size: 16px;
 
   @include mobile {
@@ -213,7 +214,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: $Merriweather;
   font-size: 18px;
 
   @include mobile {
@@ -225,7 +226,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $white;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
