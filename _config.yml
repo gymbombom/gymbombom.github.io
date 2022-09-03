@@ -11,6 +11,19 @@ description: Web Developer from Somewhere
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
+navigation_header:
+- title: Post
+  url: /post
+- title: Search
+  url: /search
+- title: Tags
+  url: /tags
+
+#pagination
+paginate: 5
+paginate_path: "paging/page:num"
+plugins: [jekyll-paginate]
+
 #
 # Flags below are optional
 #
@@ -84,6 +97,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
 
 # 미래의 post를 표시하기 위해 작성 
 future: true
