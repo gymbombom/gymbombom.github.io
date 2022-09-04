@@ -27,36 +27,30 @@ public class FirewallCheck {
   }
 }
 ```
-
 ---
 
-## 컴파일
-
+#### 컴파일
 ```shell
 $ javac FirewallCheck.java;
 ```
-
 ---
 
-## 실행
-
+#### 실행
 ```shell
 # java FirewallCheck [ip] [port]
 $ java FirewallCheck 111.222.333.444 3000;
 ```
-
 ---
 
-## 사용 예
-
-* 방화벽 open 상태이고, port Listen 중일때 
-
+#### 사용예제
+* 방화벽 open 상태이고, port Listen 중일때<br> 
 ```java
 connect SUCCESS!!!
 ```
 
-* 방화벽은 open 상태이나, port listen 중이 아닐때
+<br>
 
+* 방화벽은 open 상태이나, port listen 중이 아닐때<br>
 ```java
 Exception in thread "main" java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
@@ -70,8 +64,9 @@ Exception in thread "main" java.net.ConnectException: Connection refused: connec
 	at jExample.portCheck.main(portCheck.java:18)
 ```
 
-* 방화벽이 open 상태가 아닐때
+<br>
 
+* 방화벽이 open 상태가 아닐때<br>
 ```java
 Exception in thread "main" java.net.SocketTimeoutException: connect timed out
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
@@ -84,10 +79,9 @@ Exception in thread "main" java.net.SocketTimeoutException: connect timed out
 	at java.net.Socket.connect(Unknown Source)
 	at jExample.portCheck.main(portCheck.java:18)
 ```
-
 ---
 
-## Links
+#### Links
 [java - telnet 대신 포트 방화벽 확인하기 port check](https://goni9071.tistory.com/m/78){: target="_blank"} 
 
 ---
