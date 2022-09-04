@@ -8,7 +8,7 @@ tags :
     - 디버깅
 ---
 
-#### 운영 시스템에서 프로그램을 실행하고 디버그하기 위한 환경을 제공한다.<br>
+#### 커널 디버깅을 위한 환경을 제공한다.<br>
 * C, C++, Pascal ,FORTRAN  디버깅 제공<br>
 * Object 및 Core 파일에 대한 디버깅 제공<br>
 * compile 시 -g Flag로 compile 되어 있어야 dbx로 디버깅이 가능하다.<br>
@@ -141,3 +141,9 @@ $ (dbx) finish
 # (dbx) quit
 $ quit
 ```
+---
+
+#### Links
+[dbx 명령](https://www.ibm.com/docs/ko/aix/7.2?topic=d-dbx-command){: target="_blank"} 
+
+---
