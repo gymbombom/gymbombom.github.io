@@ -144,6 +144,6 @@ $ quit
 ---
 
 #### Links
-[dbx 명령](https://www.ibm.com/docs/ko/aix/7.2?topic=d-dbx-command){: target="_blank"} 
+* [dbx 명령](https://www.ibm.com/docs/ko/aix/7.2?topic=d-dbx-command){: target="_blank"} 
 
 ---

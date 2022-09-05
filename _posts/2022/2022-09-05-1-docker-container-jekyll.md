@@ -44,8 +44,8 @@ Skipping: _posts/2020/2020-10-11-2-docker-jekyll-developing.md has a future date
 ---
 
 #### Links
-[Developing inside a Container](https://code.visualstudio.com/docs/remote/containers){: target="_blank"}<br> 
-[VS Code로 컨테이너 안에서 개발하기](https://medium.com/@ssowonny/vs-code로-컨테이너-안에서-개발하기-d8ed0950d69a){: target="_blank"}<br> 
+* [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers){: target="_blank"}<br> 
+* [VS Code로 컨테이너 안에서 개발하기](https://medium.com/@ssowonny/vs-code로-컨테이너-안에서-개발하기-d8ed0950d69a){: target="_blank"}<br> 
 
 ---
 
