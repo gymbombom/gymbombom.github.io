@@ -34,7 +34,7 @@ services:
 
 ---
 
-#### 경험
+#### Experience
 
 ```shell
 Generating 중
