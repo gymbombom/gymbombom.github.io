@@ -20,8 +20,8 @@ navigation_header:
   url: /tags
 
 #pagination
-paginate: 5
-paginate_path: "paging/page:num"
+paginate: 10
+paginate_path: "post/:num"
 plugins: [jekyll-paginate]
 
 #
@@ -102,3 +102,4 @@ exclude:
 
 # 미래의 post를 표시하기 위해 작성 
 future: true
+ 
