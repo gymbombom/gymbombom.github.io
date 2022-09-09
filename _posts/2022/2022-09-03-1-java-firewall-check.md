@@ -21,7 +21,7 @@ public class FirewallCheck {
   public static void main(String[] args) throws UnknownHostException, IOException {
     SocketAddress endpoint =  new InetSocketAddress(args[0], Integer.valueOf(args[1]));
 
-	Socket socket = new Socket();
+    Socket socket = new Socket();
     socket.connect(endpoint, 3000);
     System.out.println("connect SUCCESS!!!");
   }
