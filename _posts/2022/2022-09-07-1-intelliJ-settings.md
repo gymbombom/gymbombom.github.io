@@ -7,8 +7,8 @@ tags :
 ---
 
 #### portable 설정
-* 1./IntelliJ IDEA.app/Contents/bin/idea.properties 파일 열기(Mac OS의 경우)
-* 2.config, system, plugins, log path를 원하는 디렉토리로 설정
+* ./IntelliJ IDEA.app/Contents/bin/idea.properties 파일 열기(Mac OS의 경우)
+* config, system, plugins, log path를 원하는 디렉토리로 설정
 
 ```properties
 
@@ -45,6 +45,19 @@ idea.plugins.path=${idea.config.path}/plugins
 idea.log.path=${idea.system.path}/log
 
 ```
+---
+
+#### SDK 설정
+* File > Project Structure > SDK's > Add JDK.. 클릭 후 JDK 추가<br>
+<img src="/images/posts/5.png" width='800' height='700'>
+
+---
+
+#### Code Folding 해제
+* Preferences > Editor > General > Code Folding 클릭
+* Show code folding outline, Imports, One-line methods 체크해제
+<img src="/images/posts/6.png" width='800' height='600'>
+
 ---
 
 #### Links
