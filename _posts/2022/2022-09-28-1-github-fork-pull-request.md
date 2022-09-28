@@ -54,7 +54,7 @@ $ git checkout issue1
 Switched to branch 'issue1'
 ```
 
-#### 5. 수정 후 commit, push
+##### 5. 수정 후 add, commit, push
 변경할 소스를 수정 후 git add 
 ```shell
 $ git add *
@@ -105,7 +105,7 @@ pull request 요청 내역을 확인하고, 원본 저장소에 write권한이 �
 ##### 8. remote branch 삭제
 <img src="/images/posts/13.png">
 
-##### 8.  branch 삭제
+##### 9. branch 삭제
 master branch 로 전환한다.
 ```shell
 $ git checkout master
