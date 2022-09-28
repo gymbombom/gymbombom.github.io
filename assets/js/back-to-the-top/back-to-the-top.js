@@ -1,27 +1,19 @@
-/* global window */
-(function (window, document, $) {
-  'use strict';
+// Get the button
+let mybutton = document.getElementById("back-to-top");
 
-  $(function () {
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-      $(window).scroll(function () {
-          var viewportTop = $(window).scrollTop();
-          if (viewportTop) {
-            $('#back-to-top').addClass('static').show();
-              var viewportBottom = viewportTop + $(window).height();
-             // var footerTop = $('#footer').offset().top;
-             var footerTop;
-              if ((footerTop <= viewportBottom) && (footerTop >= viewportTop)) {
-                  // footer is visible: static above footer
-                  $('#back-to-top').addClass('static').show();
-              } else {
-                  // footer is invisible: fixed on bottom-right of viewport
-                  $('#back-to-top').removeClass('static').show();
-              }
-          } else {
-              // already top: hide
-              $('#back-to-top').hide();
-          }
-      });
-  });
-}(window, window.document, window.jQuery));
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
