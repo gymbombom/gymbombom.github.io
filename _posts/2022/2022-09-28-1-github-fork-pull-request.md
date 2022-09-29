@@ -14,12 +14,14 @@ github 에서 Fork 버튼을 클릭하여 pull request 할 repository를 Fork �
 Fork 되면 원본repository 와 내가 fork한 repository를 확인한다.
   
 <img src="/images/posts/8.png">
+---
 
 ##### 2. 내 github repository에서 내가 Fork한 Repository를 Local 저장소로 clone 한다.
 ```shell
 # ex) git clone <Fork 한 Repository URL>
 $ git clone https://github.com/gymbombom/hyeongjukim.github.io.git;
 ```
+---
 
 ##### 3. local 저장소에 원본 저장소를 추가한다.
 내 local 저장소에 원본 repository를 바라보도록 real-master 라는 이름으로 remote저장소를 추가한다.
@@ -37,6 +39,8 @@ real-master	https://github.com/hyeongJuKim/hyeongjukim.github.io.git (fetch)
 real-master	https://github.com/hyeongJuKim/hyeongjukim.github.io.git (push)
 ```
 
+---
+
 ##### 4. Local branch 를 생성
 issue1 이라는 이름으로 local branch 를 생성
 ```shell
@@ -53,6 +57,7 @@ $ git branch
 $ git checkout issue1
 Switched to branch 'issue1'
 ```
+---
 
 ##### 5. 수정 후 add, commit, push
 변경할 소스를 수정 후 git add 
@@ -83,6 +88,8 @@ remote:
 To https://github.com/gymbombom/hyeongjukim.git
 ```
 
+---
+
 ##### 6. pull request 생성
 내가 Fork 한 저장소로 이동하여 compare & pull request 버튼을 클릭한다.
    
@@ -97,13 +104,19 @@ pull request 요청 내역을 확인하고, 원본 저장소에 write권한이 �
   
 <img src="/images/posts/11.png">
 
+---
+
 ##### 7. 원본 저장소에 merge확인
 원본 저장소의 write권한이 있는 관리자에 의해서 merge가 완료된 것을 확인한다.
   
 <img src="/images/posts/12.png">
 
+---
+
 ##### 8. remote branch 삭제
 <img src="/images/posts/13.png">
+
+---
 
 ##### 9. branch 삭제
 master branch 로 전환한다.
@@ -118,5 +131,5 @@ local branch 를 삭제한다.
 $ git branch -D issue1
 Deleted branch issue1 (was def05c3).
 
- ```
+```
 
