@@ -124,7 +124,7 @@ Syncing disks.
 ---
 
 ##### Links
-[https://qastack.kr/ubuntu/66000/how-to-merge-partitions](파티션을 병합하는 방법){: target="_blank"}<br>
+[파티션을 병합하는 방법](https://qastack.kr/ubuntu/66000/how-to-merge-partitions){: target="_blank"}<br>
 
 ---
 
