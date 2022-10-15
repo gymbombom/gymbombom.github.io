@@ -9,7 +9,7 @@ vscode 개인설정파일(user data), 확장프로그램(extension) 기본경로
 ### Extension 기본 경로
 
 OS | Location
-|---|---|
+---|---
 Windows | `%USERPROFILE%\.vscode\extensions`
 MacOS | `~/.vscode/extensions` 또는 `/Users/<user>/.vscode/extensions`
 Linux | `~/.vscode/extensions`
@@ -18,7 +18,7 @@ Linux | `~/.vscode/extensions`
 ### 개인설정파일(user-data) 기본 경로
 
 OS | Location
----|---
+---:|:---
 Windows | `%APPDATA%\Code\`
 MacOS | `~/Library/Application Support/Code/`
 Linux | `~/.config/Code/`
