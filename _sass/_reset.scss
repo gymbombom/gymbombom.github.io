@@ -49,7 +49,8 @@ table {
 }
 
 th, td {
-	border: 1px solid
+	border: 1px solid;
+	padding: 5px;
 }
 // Apply a natural box layout model to all elements
 // from: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
