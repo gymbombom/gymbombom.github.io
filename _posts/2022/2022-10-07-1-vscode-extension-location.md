@@ -18,7 +18,7 @@ Linux | `~/.vscode/extensions`
 ### 개인설정파일(user-data) 기본 경로
 
 OS | Location
----:|:---
+---|---
 Windows | `%APPDATA%\Code\`
 MacOS | `~/Library/Application Support/Code/`
 Linux | `~/.config/Code/`
