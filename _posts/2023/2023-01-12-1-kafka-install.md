@@ -167,7 +167,7 @@ $  $KAFKA_HOME/bin/kafka-console-consumer.sh --from-beginning --new-consumer --b
 
 ---
 
-#### 경험
+#### Experience
 
 ---
 
