@@ -6,9 +6,9 @@ tags :
 ---
 
 #### 준비
-* hadoop version : hadoop-2.7.2  
-* java version : 1.8.0_121  
-* os : Red Hat Enterprise Linux Server 7.2 (Maipo)  
+* hadoop version : hadoop-3.3.4  
+* java version : 17.0.2  
+* os : CentOS 7  
 
 혹시나 다른 버전의 hadoop이 필요할 경우, [hadoop Archive Realese](https://archive.apache.org/dist/hadoop/core/){: target="_blank"} 사이트에서 다운로드 받으면 된다.  
 
@@ -30,9 +30,10 @@ hadoop version 과 java version 간 호환성에 대하여 알고 싶으면, [Ha
     </property>
 
     <!-- 
-          복제계수... 같은 데이터를 다른 node로 몇개나 복제할것이냐? 를 결정하는 수.
+          복제계수 
+          같은 데이터를 다른 node로 몇개나 복제할것이냐? 를 결정하는 수.
           기본적으로 singleNode 의 경우 당연히 node 갯수가 1개 이므로 1, 
-          MultiNode의 경우 Node수에 맞추어 홀수로 설정해야 한다. 
+          MultiNode의 경우 Node갯수에 맞추어 홀수로 설정해야 한다. 
     -->
     <property>
         <name>dfs.replication</name>
@@ -47,9 +48,9 @@ hadoop version 과 java version 간 호환성에 대하여 알고 싶으면, [Ha
 <configuration>
 
     <!-- 
-         namenode 의 FSimage(스냅샷) 저장위치..
-         필수옵션은 아니지만 원하는 directory 로 설정하는것을 권장.
-         설정하지 않을 경우, default(어느위치였는지는 기억안남) 에 저장되므로 
+         namenode 의 FSimage(스냅샷) 저장위치.(optional)
+         원하는 directory 로 설정하는것을 권장함.
+         설정하지 않을 경우, default(file://${hadoop.tmp.dir}/dfs/name) 로 지정되므로 
          되도록이면 설정하도록 한다.
     -->
     <property>
@@ -58,9 +59,9 @@ hadoop version 과 java version 간 호환성에 대하여 알고 싶으면, [Ha
     </property>
 
     <!-- 
-        hadoop data 디렉토리
-        필수옵션은 아니지만 원하는 directory 로 설정하는것을 권장.
-        설정하지 않을 경우,  기본 datadir 이 /tmp/hadoop-${user.name}/dfs/data 로 지정됨.
+        hadoop datanode의 블록을 저장하는 위치(optional)
+        원하는 directory 로 설정하는것을 권장함.
+        설정하지 않을 경우,  default(file://${hadoop.tmp.dir}/dfs/data) 로 지정되므로
         되도록이면 설정하는 것을 권장한다. 
     -->
     <property>
@@ -69,8 +70,9 @@ hadoop version 과 java version 간 호환성에 대하여 알고 싶으면, [Ha
     </property>
    
     <!-- 
-        hadoop tmp directory
-        필수옵션은 아니지만 원하는 directory 로 설정하는것을 권장. 
+        hadoop tmp 디렉토리(optional)
+        원하는 directory 로 설정하는것을 권장함.
+        설정하지 않을 경우, default(/tmp/hadoop-${user.name}) 로 지정됨. 
     -->
     <property>
         <name>hadoop.tmp.dir</name>
@@ -106,8 +108,8 @@ namenode 및 datanode를 기동한다.
 ```
 
 #### 확인
-* namenode web interface  UI 에 접속하여 잘 실행되었는지 확인한다.  
-NameNode - http://localhost:50070/
+* namenode web interface UI 에 접속하여 잘 실행되었는지 확인한다.  
+NameNode - http://localhost:9870/
 
 ---
 
