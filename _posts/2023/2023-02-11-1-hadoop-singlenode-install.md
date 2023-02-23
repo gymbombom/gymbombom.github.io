@@ -118,6 +118,8 @@ NameNode - http://localhost:9870/
 ---
 
 #### Links
-[hadoop2,3 버전 port List 정리](https://vnvn31.tistory.com/entry/Hadoop-23%EB%B2%84%EC%A0%84-port-list-%EC%A0%95%EB%A6%AC){: target="_blank"}
+[hadoop2,3 버전 port List 정리](https://vnvn31.tistory.com/entry/Hadoop-23%EB%B2%84%EC%A0%84-port-list-%EC%A0%95%EB%A6%AC){: target="_blank"}<br>
+[core-default.xml 설정값](https://hadoop.apache.org/docs/r3.3.4/hadoop-project-dist/hadoop-common/core-default.xml){: target="_blank"}<br>
+[hdfs-default.xml 설정값](https://hadoop.apache.org/docs/r3.3.4/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml){: target="_blank"}<br>
 
 ---
