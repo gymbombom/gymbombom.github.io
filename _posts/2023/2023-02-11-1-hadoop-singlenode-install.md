@@ -82,6 +82,17 @@ hadoop version 과 java version 간 호환성에 대하여 알고 싶으면, [Ha
 </configuration>
 ```
 
+* $(HADOOP_HOME)/etc/hadoop/hadoop-env.sh
+
+```shell
+    # hdfs를 실행할 User명을 등록한다.
+    # ex) export HDFS_NAMENODE_USER=<user명> 
+    export HDFS_NAMENODE_USER=root
+    export HDFS_DATANODE_USER=root
+    export HDFS_SECONDARYNAMENODE_USER=root
+```
+
+
 설정파일 setting 이 완료되었으면, ssh공개키 인증을 통하여, 패스워드 없이 localhost에 ssh 접속이 가능한지 확인한다.  
 ```shell
 [gymbombom@localhost~]$ ssh localhost; #password 없이 접속 가능하다면 PASS... 그렇지 않다면 아래과정 진행
@@ -110,6 +121,90 @@ namenode 및 datanode를 기동한다.
 #### 확인
 * namenode web interface UI 에 접속하여 잘 실행되었는지 확인한다.  
 NameNode - http://localhost:9870/
+
+* 검사
+
+```shell
+  $ $HADOOP_HOME/bin/hdfs dfs -mkdir /user
+  
+  # user명과 같은 directory를 생성한다.
+  #ex) $HADOOP_HOME/bin/hdfs dfs -mkdir /user/<username> 
+  $ $HADOOP_HOME/bin/hdfs dfs -mkdir /user/root
+  
+  $ $HADOOP_HOME/bin/hdfs dfs -mkdir input #input directory 생성
+  $ $HADOOP_HOME/bin/hdfs dfs -put $HADOOP_HOME/etc/hadoop/*.xml input #파일 복사
+  
+  # mapreduce 작업을 실행해본다.
+  $ $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.4.jar grep input output 'dfs[a-z.]+'
+
+  $ $HADOOP_HOME/bin/hdfs dfs -get output output # 파일 get
+  
+  # output 파일검사
+  $ $HADOOP_HOME/bin/hdfs dfs -cat output/*
+    1	dfsadmin
+    1	dfs.replication
+    1	dfs.namenode.name.dir
+    1	dfs.datanode.data.dir
+```
+
+---
+
+#### yarn 설정
+
+* $(HADOOP_HOME)/etc/hadoop/mapred-site.xml
+
+```xml
+    <configuration>
+        
+        <property>
+            <name>mapreduce.framework.name</name>
+            <value>yarn</value>
+        </property>
+        
+        <property>
+            <name>mapreduce.application.classpath</name>
+            <value>$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop/mapreduce/lib/*</value>
+        </property>
+
+    </configuration>
+```
+
+* $(HADOOP_HOME)/etc/hadoop/yarn-site.xml
+
+```xml
+    <configuration>
+
+        <property>
+            <name>yarn.nodemanager.aux-services</name>
+            <value>mapreduce_shuffle</value>
+        </property>
+
+        <property>
+            <name>yarn.nodemanager.env-whitelist</name>
+            <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME</value>
+        </property>
+    </configuration>
+```
+
+* $(HADOOP_HOME)/etc/hadoop/hadoop-env.sh
+
+```shell
+    # yarn을 실행할 User명을 등록한다.
+    # ex) export YARN_RESOURCEMANAGER_USER=<user명> 
+    export YARN_RESOURCEMANAGER_USER=root
+    export YARN_NODEMANAGER_USER=root
+```
+
+
+#### 확인
+
+```shell
+$ $HADOOP_HOME/sbin/start-yarn.sh
+```
+
+* ResourceManager web interface UI 에 접속하여 잘 실행되었는지 확인한다.  
+ResourceManager - http://localhost:8088/
+
 
 ---
 
