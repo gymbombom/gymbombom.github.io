@@ -37,12 +37,12 @@ $ javac FirewallCheck.java;
 
 #### 실행
 ```shell
-# java FirewallCheck [ip] [port]
-$ java FirewallCheck 111.222.333.444 3000;
+# java FirewallCheck -classpath . [ip] [port]
+$ java -classpath . FirewallCheck 111.222.333.444 3000;
 ```
 ---
 
-#### 사용예제
+#### Experience
 * 방화벽 open 상태이고, port Listen 중일때<br> 
 ```java
 connect SUCCESS!!!
