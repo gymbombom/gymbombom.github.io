@@ -109,7 +109,6 @@ $ mkdir maven_repos
 ```
 
 * IntelliJ IDEA > Settings > Preferences > Build, Execution, Deployment > Build Tools > Maven > User settings file 항목수정<br>
-
 <img src="/images/posts/19.png" width='800' height='700'>
 
 
@@ -118,6 +117,8 @@ $ mkdir maven_repos
 #### SDK 설정
 * File > Project Structure > SDK's > Add JDK.. 클릭 후 JDK 추가<br>
 <img src="/images/posts/5.png" width='800' height='700'>
+* File > Project Structure > Project 에서 해당 Project에서 사용할 SDK 및 Language Level 설정<br>
+<img src="/images/posts/20.png" width='800' height='700'>
 
 ---
 
